@@ -1,0 +1,58 @@
+{
+  "placeholderImages": [
+    {
+      "id": "dashboard-preview",
+      "description": "A preview of the sahayak AI teacher dashboard showing various tools and metrics.",
+      "imageUrl": "https://images.unsplash.com/photo-1677617587258-685aaf1b1e1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXNoYm9hcmQlMjB1aXxlbnwwfHx8fDE3NTk1OTQzNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard ui"
+    },
+    {
+      "id": "cta-image",
+      "description": "A collage of diverse, smiling students from India.",
+      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50cyUyMGluZGlhfGVufDB8fHx8MTc1OTI0MTUyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students india"
+    },
+    {
+      "id": "auth-character",
+      "description": "A silhouette of Krishna playing the flute against a red moon.",
+      "imageUrl": "https://i.pinimg.com/736x/5a/96/f5/5a96f57df42a647f779e1b3a872b5a70.jpg",
+      "imageHint": "Krishna silhouette"
+    },
+    {
+      "id": "auth-graphic",
+      "description": "A silhouette of Krishna playing the flute against a red moon.",
+      "imageUrl": "https://i.pinimg.com/736x/5a/96/f5/5a96f57df42a647f779e1b3a872b5a70.jpg",
+      "imageHint": "Krishna silhouette"
+    },
+    {
+      "id": "user-avatar",
+      "description": "A placeholder avatar for a user.",
+      "imageUrl": "https://images.unsplash.com/photo-1535643302794-19c3804b874b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkyMDk1OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "book-cover-1",
+      "description": "Abstract cover for a science textbook.",
+      "imageUrl": "https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMHRleHR1cmV8ZW58MHx8fHwxNzU5MjA5NDc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract texture"
+    },
+    {
+      "id": "book-cover-2",
+      "description": "Geometric pattern for a math textbook cover.",
+      "imageUrl": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnZW9tZXRyaWMlMjBwYXR0ZXJufGVufDB8fHx8MTc1OTEzOTcwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "geometric pattern"
+    },
+    {
+      "id": "book-cover-3",
+      "description": "Illustration of historical figures for a history book.",
+      "imageUrl": "https://images.unsplash.com/photo-1577083288073-40892c0860a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoaXN0b3JpY2FsJTIwcGFpbnRpbmd8ZW58MHx8fHwxNzU5MjQxNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historical painting"
+    },
+    {
+      "id": "hero-image",
+      "description": "Abstract purple and blue background image.",
+      "imageUrl": "https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?w=800&q=80",
+      "imageHint": "abstract background"
+    }
+  ]
+}

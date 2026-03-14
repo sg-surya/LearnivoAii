@@ -1,0 +1,169 @@
+
+{
+  "entities": {
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Represents a user profile within the Sahayak AI application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user profile."
+        },
+        "role": {
+          "type": "string",
+          "description": "The user's role within the application (e.g., 'Teacher', 'Student')."
+        },
+        "email": {
+          "type": "string",
+          "description": "The user's email address.",
+          "format": "email"
+        },
+        "hasCompletedOnboarding": {
+          "type": "boolean",
+          "description": "Indicates whether the user has completed the onboarding process."
+        },
+        "name": {
+          "type": "string",
+          "description": "The user's display name."
+        },
+        "profilePicture": {
+          "type": "string",
+          "description": "URL of the user's profile picture.",
+          "format": "uri"
+        },
+        "location": {
+          "type": "string",
+          "description": "The user's location (e.g., city, region)."
+        },
+        "language": {
+          "type": "string",
+          "description": "The user's preferred language."
+        },
+        "instituteName": {
+            "type": "string",
+            "description": "The name of the user's institute or school."
+        },
+        "qualification": {
+            "type": "string",
+            "description": "The teacher's qualification (e.g., B.Ed, M.Sc.)."
+        },
+        "gender": {
+            "type": "string",
+            "description": "The user's gender."
+        },
+        "experience": {
+            "type": "string",
+            "description": "The teacher's years of experience."
+        },
+        "subjects": {
+            "type": "string",
+            "description": "Subjects taught by the teacher."
+        },
+        "phone": {
+            "type": "string",
+            "description": "The user's phone number."
+        },
+        "class": {
+            "type": "string",
+            "description": "The student's class or grade."
+        },
+        "stream": {
+            "type": "string",
+            "description": "The student's academic stream (e.g., Science, Commerce)."
+        },
+        "coverUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "defaultLanguage": {
+          "type": "string"
+        },
+        "defaultGrade": {
+          "type": "string"
+        },
+        "creativityLevel": {
+          "type": "string",
+          "enum": ["precise", "balanced", "creative"]
+        },
+        "autoSave": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "email",
+        "hasCompletedOnboarding"
+      ]
+    },
+    "Folder": {
+      "title": "Folder",
+      "type": "object",
+      "description": "A folder to organize assets.",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "createdAt"]
+    },
+    "Asset": {
+        "title": "Asset",
+        "type": "object",
+        "description": "A generic asset created by an AI tool.",
+        "properties": {
+            "type": { "type": "string" },
+            "name": { "type": "string" },
+            "content": { "type": "object" },
+            "createdAt": { "type": "string", "format": "date-time" },
+            "folderId": { "type": "string" }
+        },
+        "required": ["type", "name", "content", "createdAt"]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous",
+      "google.com"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/userProfiles/{userProfileId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores user profile information. Uses path-based ownership for security.",
+          "params": [
+            {
+              "name": "userProfileId",
+              "description": "The unique ID of the user profile, matching the Firebase Auth UID."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/userProfiles/{userProfileId}/folders/{folderId}",
+        "definition": {
+            "entityName": "Folder",
+            "schema": { "$ref": "#/backend/entities/Folder" },
+            "description": "Folders created by the user to organize their assets."
+        }
+      },
+      {
+        "path": "/userProfiles/{userProfileId}/assets/{assetId}",
+        "definition": {
+            "entityName": "Asset",
+            "schema": { "$ref": "#/backend/entities/Asset" },
+            "description": "Assets generated by the user."
+        }
+      }
+    ]
+  }
+}
